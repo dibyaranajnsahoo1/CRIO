@@ -1,0 +1,169 @@
+/* style.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fixed Navbar */
+#mainNavbar {
+    transition: all 0.5s ease; /* Smooth transition for background and shadow */
+ /* Initially transparent */
+    position: fixed; /* Fixed positioning */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top */
+    /* background: transparent; */
+}
+
+/* Navbar links before scrolling */
+#mainNavbar .nav-link {
+    color: black; /* Black text before scrolling */
+}
+
+/* Navbar after scroll */
+.navbar.scrolled {
+    background: linear-gradient(90deg, #007BFF, #00A4FF); /* Blue gradient */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
+}
+
+/* Navbar links after scrolling */
+.navbar.scrolled .nav-link {
+    color: white; /* White text after scrolling */
+}
+
+/* Banner Section */
+.banner {
+    height: 400px; /* Height of banner */
+    overflow: hidden; /* Hide overflow for scrolling effect */
+}
+
+.banner img {
+    width: 100%; /* Full width for images */
+    height: 100%; /* Full height for images */
+    object-fit: cover; /* Cover the area */
+    animation: slide 20s infinite; /* Animation for sliding effect */
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(-300%); }
+}
+
+/* General section styles */
+section {
+    padding: 60px 0; /* Padding for sections */
+}
+
+/* About Section */
+.about {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between content */
+    align-items: center; /* Center alignment */
+}
+
+.about img {
+    max-width: 45%; /* Image width */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Completed Projects Section */
+.projects {
+    display: grid; /* Grid layout for projects */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Gap between items */
+}
+
+.project-item {
+    background: #f8f9fa; /* Light background */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding for project items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for project items */
+}
+
+/* Founder Section */
+.founder {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center alignment */
+    overflow-x: auto;
+}
+
+.founder img {
+    max-width: 150px; /* Limit founder image size */
+    border-radius: 50%; /* Circular image */
+    margin-right: 20px; /* Space between image and text */
+    object-fit: cover;
+}
+
+/* Employee Section */
+.employees {
+    display: flex; /* Flexbox for layout */
+    overflow-x: auto; /* Horizontal scrolling */
+    padding: 20px 0; /* Padding for employee section */
+}
+#employees img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a slight shadow around employee images */
+}
+
+#employees p {
+    font-size: 14px;
+    color: #6c757d;
+    text-align: center;
+}
+
+/* Footer styling */
+footer {
+    background-color: #343a40; /* Dark background for footer */
+    padding: 20px 0; /* Padding for footer */
+    color: white; /* White text color */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Font size for footer text */
+}
+
+footer a {
+    color: white; /* White link color */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+footer a:hover {
+    color: #ffdd57; /* Hover effect for footer links */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 40px; /* Smaller logo size on mobile */
+        height: 40px; /* Maintain aspect ratio */
+    }
+
+    .about img {
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    #employees img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    #employees p {
+        font-size: 12px;
+    }
+}
+
+/* Optional styles for smoother text and backgrounds */
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
